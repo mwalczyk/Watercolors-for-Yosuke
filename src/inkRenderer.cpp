@@ -25,37 +25,37 @@ void InkRenderer::setup(int width = 512, int height = 512, int precision = 4)
     m_backgroundColor.set(249, 250, 234);
     
     //Allocate and clear all FBOs
-    m_inkBlurFbo.allocate(m_width, m_height, GL_RGBA32F, m_precision);
+    m_inkBlurFbo.allocate(m_width, m_height, GL_RGBA, m_precision);
     m_inkBlurFbo.begin();
     ofClear(m_backgroundColor);
     m_inkBlurFbo.end();
     
-    m_ping.allocate(m_width, m_height, GL_RGBA32F, m_precision);
+    m_ping.allocate(m_width, m_height, GL_RGBA, m_precision);
     m_ping.begin();
     ofClear(RGGRAY); //50% gray
     m_ping.end();
     
-    m_pong.allocate(m_width, m_height, GL_RGBA32F, m_precision);
+    m_pong.allocate(m_width, m_height, GL_RGBA, m_precision);
     m_pong.begin();
     ofClear(RGGRAY); //50% gray
     m_pong.end();
     
-    m_paintFbo.allocate(m_width, m_height, GL_RGBA32F, m_precision);
+    m_paintFbo.allocate(m_width, m_height, GL_RGBA, m_precision);
     m_paintFbo.begin();
     ofClear(ofColor::white);
     m_paintFbo.end();
     
-    m_blurXFbo.allocate(m_width, m_height, GL_RGBA32F, m_precision);
+    m_blurXFbo.allocate(m_width, m_height, GL_RGBA, m_precision);
     m_blurXFbo.begin();
     ofClear(ofColor::white);
     m_blurXFbo.end();
     
-    m_blurYFbo.allocate(m_width, m_height, GL_RGBA32F, m_precision);
+    m_blurYFbo.allocate(m_width, m_height, GL_RGBA, m_precision);
     m_blurYFbo.begin();
     ofClear(ofColor::white);
     m_blurYFbo.end();
     
-    m_edgeFbo.allocate(m_width, m_height, GL_RGBA32F, m_precision);
+    m_edgeFbo.allocate(m_width, m_height, GL_RGBA, m_precision);
     m_edgeFbo.begin();
     ofClear(ofColor::white);
     m_edgeFbo.end();
